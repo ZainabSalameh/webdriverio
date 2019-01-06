@@ -16,15 +16,11 @@
  *
  * @alias element.getValue
  * @return {String}  requested element(s) value
- * @uses protocol/elements, protocol/elementIdProperty
+ * @uses protocol/elements, protocol/getElementAttribute
  * @type property
  *
  */
 
 export default function getValue () {
-    if (this.isW3C) {
-        return this.getElementProperty(this.elementId, 'value')
-    }
-
     return this.getElementAttribute(this.elementId, 'value')
 }
